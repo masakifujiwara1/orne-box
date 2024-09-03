@@ -46,3 +46,7 @@
     uri: https://github.com/ANYbotics/message_logger.git
     local-name: message_logger
     version: master
+- git:
+    uri: https://github.com/masakifujiwara1/emcl2.git
+    local-name: emcl2
+    version: master
