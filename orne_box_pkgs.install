@@ -1,7 +1,7 @@
 - git:
     uri: https://github.com/open-rdc/ypspur
     local-name: ypspur
-    version: master
+    version: noetic-devel
 - git:
     uri: https://github.com/openspur/ypspur_ros
     local-name: ypspur_ros
