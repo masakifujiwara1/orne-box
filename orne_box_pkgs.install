@@ -3,10 +3,6 @@
     local-name: ypspur
     version: noetic-devel
 - git:
-    uri: https://github.com/openspur/ypspur_ros
-    local-name: ypspur_ros
-    version: master
-- git:
     uri: https://github.com/masakifujiwara1/orne-box
     local-name: orne-box
     version: TC_2024_EX
