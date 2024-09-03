@@ -36,7 +36,7 @@
     <arg name="use_waypoint_reconfigure" value="true"/>
   </include>
 
-  <include file="$(find map_changer)/launch/map_changer.launch"/>
+  <!--<include file="$(find map_changer)/launch/map_changer.launch"/>-->
 	
   <node pkg="rviz" type="rviz" name="rviz" args="-d $(find orne_box_navigation_executor)/rviz/nav.rviz"/>
 
