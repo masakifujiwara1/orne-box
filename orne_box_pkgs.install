@@ -1,5 +1,5 @@
 - git:
-    uri: https://github.com/DaikiMaekawa/ypspur
+    uri: https://github.com/open-rdc/ypspur
     local-name: ypspur
     version: master
 - git:
@@ -9,7 +9,7 @@
 - git:
     uri: https://github.com/open-rdc/orne-box
     local-name: orne-box
-    version: TC_2021
+    version: TC_2024_EX
 - git:
     uri: https://github.com/ros-planning/navigation
     local-name: navigation
@@ -27,7 +27,7 @@
     local-name: robot_localization
     version: noetic-devel
 - git:
-    uri: https://github.com/NaokiTakahashi12/waypoint_manager
+    uri: https://github.com/masakifujiwara1/waypoint_manager
     local-name: waypoint_manager
     version: main
 - git:
@@ -37,10 +37,6 @@
 - git:
     uri: https://github.com/at-wat/mcl_3dl_msgs
     local-name: mcl_3dl_msgs
-    version: master
-- git:
-    uri: https://github.com/KumarRobotics/ublox
-    local-name: ublox
     version: master
 - git:
     uri: https://github.com/ANYbotics/any_node.git
