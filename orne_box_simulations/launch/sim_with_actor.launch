@@ -47,6 +47,16 @@
     <arg name="cloud_source" value="$(arg cloud_source)"/>
   </include>
 
+  <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan">
+       <remap from="cloud_in" to="rfans_points"/>
+       <remap from="scan" to="rfans_scan"/>
+       <param name="max_height" value="5.0"/>
+       <param name="min_height" value="0.0"/>
+       <param name="range_max" value="50.0"/>
+       <param name="range_min" value="0.0"/>
+       <param name="angle_increment" value="0.0035"/>
+  </node>
+
   <node pkg="orne_box_bringup" type="projected_transform_publisher_node" name="projected_transform_publisher" output="$(arg output)">
   </node>
 

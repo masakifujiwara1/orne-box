@@ -3,7 +3,8 @@ Panels:
     Help Height: 78
     Name: Displays
     Property Tree Widget:
-      Expanded: ~
+      Expanded:
+        - /LaserScan3
       Splitter Ratio: 0.5
     Tree Height: 187
   - Class: rviz/Selection
@@ -42,7 +43,7 @@ Visualization Manager:
         Z: 0
       Plane: XY
       Plane Cell Count: 10
-      Reference Frame: <Fixed Frame>
+      Reference Frame: map
       Value: true
     - Alpha: 0.699999988079071
       Class: rviz/Map
@@ -374,7 +375,7 @@ Visualization Manager:
       Marker Topic: /viz_marker
       Name: MarkerArray
       Namespaces:
-        "": true
+        {}
       Queue Size: 100
       Value: true
     - Class: rviz/MarkerArray
@@ -382,7 +383,7 @@ Visualization Manager:
       Marker Topic: /detect_human
       Name: MarkerArray
       Namespaces:
-        {}
+        point: true
       Queue Size: 100
       Value: true
     - Class: rviz/Image
@@ -400,8 +401,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 2.528398036956787
-        Min Value: -0.012184351682662964
+        Max Value: 2.5276501178741455
+        Min Value: -0.02921271324157715
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -421,6 +422,34 @@ Visualization Manager:
       Size (m): 0.05000000074505806
       Style: Flat Squares
       Topic: /rfans_points
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/LaserScan
+      Color: 85; 170; 0
+      Color Transformer: FlatColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: LaserScan
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.10000000149011612
+      Style: Flat Squares
+      Topic: /rfans_scan
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -453,7 +482,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 19.930830001831055
+      Distance: 14.95256519317627
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -461,17 +490,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.8232805728912354
-        Y: -0.5418896675109863
-        Z: -2.286932067363523e-05
+        X: 0.9785518646240234
+        Y: 0.5721808075904846
+        Z: -2.763769225566648e-05
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.3347965478897095
+      Pitch: 1.1047966480255127
       Target Frame: base_link
-      Yaw: 3.245323657989502
+      Yaw: 3.245330810546875
     Saved: ~
 Window Geometry:
   Displays:
@@ -492,4 +521,4 @@ Window Geometry:
     collapsed: false
   Width: 1208
   X: 72
-  Y: 388
+  Y: 37
