@@ -21,3 +21,7 @@ global_costmap:
 #      type: costmap_2d::ObstacleLayer
     - name: inflation_layer
       type: costmap_2d::InflationLayer
+    - name: marker_array_layer
+      type: marker_array_layer_namespace::MarkerArrayLayer
+    - name: marker_inflation_layer
+      type: costmap_2d::InflationLayer

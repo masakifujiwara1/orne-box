@@ -70,3 +70,11 @@ inflation_layer:
   inflate_unknown: true
   inflation_radius: 1.5
   cost_scaling_factor: 3.0
+marker_inflation_layer:
+  enabled: true
+  use_maximum: true
+  inflate_unknown: true
+  inflation_radius: 0.8
+  cost_scaling_factor: 3.0
+marker_array_layer:
+  enabled: true
