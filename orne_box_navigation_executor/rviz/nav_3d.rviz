@@ -14,10 +14,9 @@ Panels:
         - /Odometries1/Wheeled1/Shape1
         - /Odometries1/Wheeled1/Covariance1
         - /Odometries1/GPS1/Shape1
-        - /mcl_3dl1
         - /PointCloud22
       Splitter Ratio: 0.5
-    Tree Height: 282
+    Tree Height: 326
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Views
@@ -56,21 +55,120 @@ Visualization Manager:
       Plane Cell Count: 100
       Reference Frame: map
       Value: true
-    - Alpha: 0.5
+    - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
-      Enabled: false
+      Enabled: true
       Links:
         All Links Enabled: true
         Expand Joint Details: false
-        Expand Link Details: true
+        Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_rgb_optical_back_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        camera_rgb_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        camera_rgb_optical_front_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        gnss_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hokuyo_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_caster_swivel_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_caster_wheel_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mirror_lidar_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        omnidirectional_camera_back_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        omnidirectional_camera_front_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        rfans_camera_rgb_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        right_caster_swivel_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_caster_wheel_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        surestar:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        surestar_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wheel_left_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wheel_right_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        zed_camera_center:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
       Update Interval: 0
-      Value: false
+      Value: true
       Visual Enabled: true
     - Class: rviz/TF
       Enabled: true
@@ -81,7 +179,13 @@ Visualization Manager:
         All Enabled: false
         base_link:
           Value: true
+        camera_link:
+          Value: true
+        camera_rgb_optical_back_frame:
+          Value: true
         camera_rgb_optical_frame:
+          Value: true
+        camera_rgb_optical_front_frame:
           Value: true
         floor:
           Value: true
@@ -96,6 +200,10 @@ Visualization Manager:
         mirror_lidar_link:
           Value: true
         odom:
+          Value: true
+        omnidirectional_camera_back_frame:
+          Value: true
+        omnidirectional_camera_front_frame:
           Value: true
         projected_base_link:
           Value: true
@@ -123,6 +231,13 @@ Visualization Manager:
             {}
           odom:
             base_link:
+              camera_link:
+                omnidirectional_camera_back_frame:
+                  camera_rgb_optical_back_frame:
+                    {}
+                omnidirectional_camera_front_frame:
+                  camera_rgb_optical_front_frame:
+                    {}
               camera_rgb_optical_frame:
                 {}
               gnss_link:
@@ -674,10 +789,10 @@ Visualization Manager:
           Use rainbow: true
           Value: true
         - Class: jsk_rviz_plugin/Diagnostics
-          Enabled: true
+          Enabled: false
           Name: Diagnostics
           Topic: /diagnostics
-          Value: true
+          Value: false
           axis: x
           diagnostics namespace: "mcl_3dl: Status"
           font size: 0.5
@@ -1090,8 +1205,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 2.1625494956970215
-        Min Value: -0.0300675630569458
+        Max Value: 1.6417829990386963
+        Min Value: -0.9450616836547852
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -1114,6 +1229,26 @@ Visualization Manager:
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
+      Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /detect_human
+      Name: MarkerArray
+      Namespaces:
+        point: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /yolo/dbg_image
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Image
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
       Value: true
   Enabled: true
   Global Options:
@@ -1144,7 +1279,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 8.193108558654785
+      Distance: 16.836856842041016
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -1152,27 +1287,29 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -0.06940007209777832
-        Y: 0.7551447153091431
+        X: 0.10805463790893555
+        Y: -3.6519083976745605
         Z: 1.9073486328125e-06
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.3103985786437988
+      Pitch: 0.9653990268707275
       Target Frame: base_link
-      Yaw: 2.1086130142211914
+      Yaw: 5.008648872375488
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 736
+  Height: 1043
   Hide Left Dock: false
   Hide Right Dock: true
+  Image:
+    collapsed: false
   Left Image:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000400000000000001b70000024bfc020000000bfb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003b0000019b000000c700fffffffb0000002a0057006100790070006f0069006e0074004f00700065007200610074006f007200500061006e0065006c01000001dc000000aa0000009600fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fc0000030e0000008e0000000000fffffffa000000000100000001fb0000002200530074006100740065005400720069006700670065007200500061006e0065006c0100000000000001b70000000000000000fc000002b7000000e50000000000fffffffaffffffff0100000004fb000000160052006900670068007400200049006d0061006700650000000000ffffffff0000009500fffffffb00000014004c00650066007400200049006d0061006700650000000000ffffffff0000008d00fffffffb0000001800530074006500720065006f00200049006d0061006700650000000000ffffffff0000009d00fffffffb0000001200520047004200200049006d0061006700650000000000000001b70000009000ffffff000000010000012600000368fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003d00000368000000a000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004b800000039fc0100000002fb0000000800540069006d00650100000000000004b80000035c00fffffffb0000000800540069006d00650100000000000004500000000000000000000002fb0000024b00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000001b70000037efc020000000cfb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003b000001c7000000c700fffffffb0000002a0057006100790070006f0069006e0074004f00700065007200610074006f007200500061006e0065006c0100000208000000960000009600fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fc0000030e0000008e0000000000fffffffa000000000100000001fb0000002200530074006100740065005400720069006700670065007200500061006e0065006c0100000000000001b70000000000000000fc000002b7000000e50000000000fffffffaffffffff0100000004fb000000160052006900670068007400200049006d0061006700650000000000ffffffff0000009500fffffffb00000014004c00650066007400200049006d0061006700650000000000ffffffff0000008d00fffffffb0000001800530074006500720065006f00200049006d0061006700650000000000ffffffff0000009d00fffffffb0000001200520047004200200049006d0061006700650000000000000001b70000009000fffffffb0000000a0049006d00610067006501000002a4000001150000001600ffffff000000010000012600000368fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003d00000368000000a000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000078000000039fc0100000002fb0000000800540069006d00650100000000000007800000035c00fffffffb0000000800540069006d00650100000000000004500000000000000000000005c30000037e00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   RGB Image:
     collapsed: false
   Right Image:
@@ -1187,6 +1324,6 @@ Window Geometry:
     collapsed: true
   WaypointOperatorPanel:
     collapsed: false
-  Width: 1208
-  X: 72
+  Width: 1920
+  X: 0
   Y: 0
