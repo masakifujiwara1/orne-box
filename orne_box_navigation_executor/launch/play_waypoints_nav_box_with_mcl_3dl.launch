@@ -2,8 +2,8 @@
 
 <launch>
   <arg name="robot_name"     default="box2"/>
-  <arg name="map_pcd"/>
-  <arg name="costmap_file"   default="$(find orne_box_navigation_executor)/maps/mymap"/>
+  <arg name="map_pcd" default="$(find orne_box_navigation_executor)/maps/tsudanuma2-3_3d.pcd"/>
+  <arg name="costmap_file"   default="$(find orne_box_navigation_executor)/maps/tsudanuma2-3_3d"/>
   <arg name="cmd_vel" default="cmd_vel"/>
   <arg name="odom_topic" default="odometry/filtered"/>
   <arg name="cloud_topic" default="rfans/surestar_points"/>
