@@ -7,7 +7,7 @@
   <arg name="z_pos" default="0.0"/>
   <arg name="paused" default="false"/>
   <arg name="use_sim_time" default="true"/>
-  <arg name="gui" default="true"/>
+  <arg name="gui" default="false"/>
   <arg name="headless" default="false"/>
   <arg name="debug" default="false"/>
   <arg name="extra_gazebo_args" default="orne_box/diff_drive_controller/odom:=odom orne_box/diff_drive_controller/cmd_vel:=cmd_vel"/>
