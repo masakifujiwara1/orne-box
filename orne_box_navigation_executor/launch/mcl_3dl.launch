@@ -17,6 +17,10 @@
   <arg name="generate_test_bag" default="false" />
   <arg name="use_bag_file" default="false" />
   <arg name="bag_file" if="$(arg use_bag_file)" />
+  <arg name="init_x" default="0.0" />
+  <arg name="init_y" default="0.0" />
+  <arg name="init_yaw" default="0.0" />  
+  <arg name="init_z" default="0.0" />  
 
   <param name="/use_sim_time" value="true" if="$(arg use_bag_file)" />
   <node pkg="rosbag" type="play" name="playback" args="--clock $(arg bag_file)"
@@ -44,6 +48,10 @@
 
   <node pkg="mcl_3dl" type="mcl_3dl" name="mcl_3dl" output="screen" unless="$(arg generate_test_bag)">
 	  <param name="compatible" value="1" />
+	  <param name="init_x" value="$(arg init_x)" />
+	  <param name="init_y" value="$(arg init_y)" />
+	  <param name="init_yaw" value="$(arg init_yaw)" />
+	  <param name="init_z" value="$(arg init_z)" />
 	  <remap from="odom" to="$(arg odom_topic)"/>
 	  <remap from="cloud" to="$(arg cloud_topic)"/>
 	  <remap from="imu/data" to="$(arg imu_topic)"/>

@@ -1,0 +1,1 @@
+roslaunch orne_box_navigation_executor play_waypoints_nav_box_with_mcl_3dl.launch cloud_topic:=/rfans_points waypoint_config:=/home/ubuntu/catkin_ws/src/orne-box/orne_box_navigation_executor/config/waypoint_server/waypoint_server_crossing.yaml

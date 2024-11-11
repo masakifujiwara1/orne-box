@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name="robot_name"     default="box2"/>
+  <arg name="map_pcd" default="$(find orne_box_navigation_executor)/maps/tsudanuma2-3_3d.pcd"/>
+  <arg name="costmap_file"   default="$(find orne_box_navigation_executor)/maps/tsudanuma2-3_3d"/>
+  <arg name="cmd_vel" default="cmd_vel"/>
+  <arg name="odom_topic" default="odometry/filtered"/>
+  <arg name="cloud_topic" default="rfans_points"/>
+  <arg name="imu_topic" default="imu_data"/>
+  <arg name="waypoint_config" default="$(find orne_box_navigation_executor)/config/waypoint_server/waypoint_server_crossing.yaml"/>
+  <arg name="init_x" value="-1.25" />
+  <arg name="init_y" value="2.6" />
+  <arg name="init_yaw" value="2.87" />
+  <arg name="init_z" value="-0.82" />
+
+  <include file="$(find orne_box_navigation_executor)/launch/move_base.launch">
+    <arg name="robot_name"  value="$(arg robot_name)"/>
+    <arg name="map_file"    value="$(arg costmap_file)"/>
+    <arg name="cmd_vel"     value="$(arg cmd_vel)"/>
+    <arg name="odom_topic"  value="$(arg odom_topic)"/>
+  </include>
+
+  <include file="$(find orne_box_navigation_executor)/launch/mcl_3dl.launch">
+    <arg name="map_pcd"     value="$(arg map_pcd)"/>
+    <arg name="odom_topic"  value="$(arg odom_topic)"/>
+    <arg name="cloud_topic" value="$(arg cloud_topic)"/>
+    <arg name="imu_topic"   value="$(arg imu_topic)"/>
+    <arg name="init_x" value="$(arg init_x)" />
+	  <arg name="init_y" value="$(arg init_y)" />
+	  <arg name="init_yaw" value="$(arg init_yaw)" />
+	  <arg name="init_z" value="$(arg init_z)" />
+  </include>
+
+  <include file="$(find orne_box_navigation_executor)/launch/waypoint_server.launch">
+    <arg name="config_file" value="$(arg waypoint_config)"/>
+  </include>
+
+  <node pkg="timed_roslaunch" type="timed_roslaunch.sh" 
+    args="20 orne_box_navigation_executor start_wp_nav.launch" name="timed_roslaunch1" />
+
+</launch>
+
