@@ -1211,8 +1211,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 2.539278507232666
-        Min Value: -0.4102749228477478
+        Max Value: 2.2845118045806885
+        Min Value: -0.33521127700805664
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -1241,11 +1241,7 @@ Visualization Manager:
       Marker Topic: /detect_human
       Name: MarkerArray
       Namespaces:
-        boxes: true
-        text11: true
-        text12: true
-        text13: true
-        text14: true
+        {}
       Queue Size: 100
       Value: true
     - Class: rviz/Image
@@ -1265,7 +1261,7 @@ Visualization Manager:
       Marker Topic: /viz_marker
       Name: MarkerArray
       Namespaces:
-        "": true
+        {}
       Queue Size: 100
       Value: true
     - Class: rviz/Image
@@ -1309,7 +1305,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 18.57524299621582
+      Distance: 16.346214294433594
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -1317,17 +1313,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -7.26385498046875
-        Y: -2.9950833320617676
-        Z: 1.9073486328125e-06
+        X: -2.980988025665283
+        Y: 1.3904972076416016
+        Z: 1.9108083506580442e-06
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.7347972989082336
+      Pitch: 1.2397972345352173
       Target Frame: base_link
-      Yaw: 2.9185805320739746
+      Yaw: 3.1535871028900146
     Saved: ~
 Window Geometry:
   Displays:

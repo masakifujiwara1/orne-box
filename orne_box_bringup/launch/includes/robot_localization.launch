@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <launch>
   <arg name="output" default="screen"/>
-  <node pkg="robot_localization" type="navsat_transform_node" name="navsat_transform_node" output="$(arg output)">
+  <!-- <node pkg="robot_localization" type="navsat_transform_node" name="navsat_transform_node" output="$(arg output)">
     <remap from="imu/data" to="imu_data"/>
     <remap from="gps/fix" to="ublox/fix"/>
-  </node>
+  </node> -->
   <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization_node" output="$(arg output)">
     <rosparam>
         publish_acceleration: true

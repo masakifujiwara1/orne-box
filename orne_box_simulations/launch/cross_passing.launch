@@ -57,12 +57,12 @@
        <param name="angle_increment" value="0.0035"/>
   </node>
 
-  <node pkg="orne_box_bringup" type="projected_transform_publisher_node" name="projected_transform_publisher" output="$(arg output)">
-  </node>
+  <!-- <node pkg="orne_box_bringup" type="projected_transform_publisher_node" name="projected_transform_publisher" output="$(arg output)">
+  </node> -->
 
   <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find orne_box_simulations)/rviz/sim.rviz"/> -->
 
   <node pkg="timed_roslaunch" type="timed_roslaunch.sh" 
-    args="5 orne_box_navigation_executor cross_passing.launch" name="timed_roslaunch2" />
+    args="10 orne_box_navigation_executor cross_passing.launch" name="timed_roslaunch2" />
 
 </launch>

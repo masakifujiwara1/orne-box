@@ -37,7 +37,7 @@
   </include>
 
   <node pkg="timed_roslaunch" type="timed_roslaunch.sh" 
-    args="23 orne_box_navigation_executor start_wp_nav.launch" name="timed_roslaunch1" />
+    args="17 orne_box_navigation_executor start_wp_nav.launch" name="timed_roslaunch1" />
 
 </launch>
 
