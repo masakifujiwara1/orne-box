@@ -37,7 +37,7 @@ local_cost_cloud_layer:
     sensor_frame: surestar
     marking: true
     clearing: true
-    inf_is_valid: true
+    inf_is_valid: false
     min_obstacle_height: -.inf
     max_obstacle_height: 0.6
     topic: /cost_cloud_process/cost_cloud
@@ -71,9 +71,9 @@ inflation_layer:
   inflation_radius: 1.5
   cost_scaling_factor: 3.0
 marker_array_layer:
-  enabled: true
+  enabled: false
   marker_inflation_layer:
-    enabled: true
+    enabled: false
     use_maximum: true
     inflate_unknown: true
     inflation_radius: 2.5

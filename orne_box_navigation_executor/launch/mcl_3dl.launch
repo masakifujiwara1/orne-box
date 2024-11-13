@@ -22,13 +22,6 @@
   <arg name="init_yaw" default="0.0" />  
   <arg name="init_z" default="0.0" />  
 
-  <param name="/use_sim_time" value="true" if="$(arg use_bag_file)" />
-  <node pkg="rosbag" type="play" name="playback" args="--clock $(arg bag_file)"
-      if="$(arg use_bag_file)">
-    <remap from="odom" to="odom_unused" if="$(arg without_odom)" />
-    <remap from="imu/data" to="imu/data_unused" if="$(arg without_imu)" />
-  </node>
-
   <arg name="config_file" default="$(find orne_box_navigation_executor)/config/mcl_3dl.yaml"
       unless="$(eval arg('without_odom') or arg('without_imu'))" />
   <arg name="config_file" default="$(find mcl_3dl)/config/test_localization_noodom.yaml"
@@ -69,7 +62,7 @@
     <remap from="cloud_pcd" to="mapcloud" />
   </node>
 
-  <node pkg="trajectory_tracker" type="trajectory_recorder" name="path_recorder"
+  <!-- <node pkg="trajectory_tracker" type="trajectory_recorder" name="path_recorder"
       if="$(arg use_neonavigation)">
     <param name="dist_interval" value="0.1" />
     <param name="ang_interval" value="0.2" />
@@ -78,6 +71,6 @@
       if="$(arg use_neonavigation)">
     <param name="dist_interval" value="0.5" />
     <param name="ang_interval" value="100.0" />
-  </node>
+  </node> -->
 
 </launch>
