@@ -5,7 +5,7 @@ regist_goal_point_topic: waypoint/regist_point
 visualize_waypoints_topic: waypoints
 robot_base_frame: base_link
 global_frame: map
-goal_publish_frequency: 0.5
+goal_publish_frequency: 1.0
 goal_check_frequency: 1.0
 default_goal_radius: 1.0
 waypoints_file: $(find orne_box_navigation_executor)/config/waypoint_server/waypoints/cross2d.yaml

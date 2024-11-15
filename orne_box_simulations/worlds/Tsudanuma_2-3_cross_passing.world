@@ -19050,15 +19050,15 @@
         <trajectory id="2" type="walking">
           <waypoint>
             <time>0</time>
-            <pose>5.5 -5.0 0 0 0 -1.57</pose>
+            <pose>5.5 -6.5 0 0 0 -1.57</pose>
           </waypoint>
           <waypoint>
-            <time>16.6</time>
+            <time>19.2</time>
             <pose>5.5 5.0 0 0 0 -1.57</pose>
           </waypoint>
           <waypoint>
-            <time>33.2</time>
-            <pose>5.5 -5.0 0 0 0 1.57</pose>
+            <time>38.3</time>
+            <pose>5.5 -6.5 0 0 0 1.57</pose>
           </waypoint>
         </trajectory>
       </script>

@@ -1,12 +1,11 @@
 Panels:
   - Class: rviz/Displays
-    Help Height: 78
+    Help Height: 0
     Name: Displays
     Property Tree Widget:
-      Expanded:
-        - /LaserScan3
+      Expanded: ~
       Splitter Ratio: 0.5
-    Tree Height: 124
+    Tree Height: 202
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Views
@@ -426,8 +425,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 2.5331130027770996
-        Min Value: -0.02338850498199463
+        Max Value: 2.5383594036102295
+        Min Value: -0.07902821898460388
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -444,7 +443,7 @@ Visualization Manager:
       Queue Size: 10
       Selectable: true
       Size (Pixels): 3
-      Size (m): 0.05000000074505806
+      Size (m): 0.07000000029802322
       Style: Flat Squares
       Topic: /rfans_points
       Unreliable: false
@@ -596,7 +595,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 23.070140838623047
+      Distance: 15.052210807800293
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -604,17 +603,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -7.188660621643066
-        Y: 15.391607284545898
-        Z: -2.096197204082273e-05
+        X: -4.526547431945801
+        Y: -0.4307236671447754
+        Z: -2.382299499004148e-05
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.1197967529296875
+      Pitch: 0.7497970461845398
       Target Frame: base_link
-      Yaw: 3.455333709716797
+      Yaw: 3.0953316688537598
     Saved: ~
 Window Geometry:
   Displays:

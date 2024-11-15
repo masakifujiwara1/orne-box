@@ -46,7 +46,7 @@ global_obstacles_layer:
   obstacle_range: 10.0
   raytrace_range: 10.0
   inflation_radius: 0.5
-  combination_method: 1
+  combination_method: 0
   observation_sources: hokuyo_laser_scan
   hokuyo_laser_scan:
     data_type: LaserScan
@@ -71,10 +71,10 @@ inflation_layer:
   inflation_radius: 1.5
   cost_scaling_factor: 3.0
 marker_array_layer:
-  enabled: false
-  marker_inflation_layer:
-    enabled: false
-    use_maximum: true
-    inflate_unknown: true
-    inflation_radius: 2.5
-    cost_scaling_factor: 10.0
+  enabled: true
+marker_inflation_layer:
+  enabled: true
+  use_maximum: true
+  inflate_unknown: true
+  inflation_radius: 2.5
+  cost_scaling_factor: 3.0
