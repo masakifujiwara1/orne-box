@@ -11,17 +11,17 @@ waypoint_server:
   waypoints:
     - id: 1
       position:
-        x: -1.409795
-        y: -10.29914
+        x: -1.236362
+        y: -13.41425
         z: -3
       euler_angles:
         x: -0
         y: -0
         z: 1.826749
       properties:
-        - key: goal_radius
-          value: 1.000000
         - key: stop
           value: false
+        - key: goal_radius
+          value: 1.000000
       connections:
         - 2
