@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
   <arg name="model" default="$(find orne_box_description)/urdf/orne_box_3d_lidar.urdf.xacro"/>
-  <arg name="world" default="worlds/Tsudanuma_2-3_hallway_passing002.world"/>
+  <arg name="world" default="worlds/Tsudanuma_2-3_block_passing.world"/>
   <arg name="x_pos" default="4.5"/>
   <arg name="y_pos" default="-0.2"/>
   <arg name="z_pos" default="0.0"/>
