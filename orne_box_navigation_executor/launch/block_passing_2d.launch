@@ -8,7 +8,7 @@
   <arg name="scan_topic" default="/rfans_scan"/>
   <arg name="cmd_vel" default="cmd_vel"/>
   <arg name="use_prev_wp" default="true"/>
-  <arg name="waypoint_config" default="$(find orne_box_navigation_executor)/config/waypoint_server/waypoint_server_hallway_passing_2d.yaml"/>
+  <arg name="waypoint_config" default="$(find orne_box_navigation_executor)/config/waypoint_server/waypoint_server_block_passing_2d.yaml"/>
   <arg name="reconfig_file" default="$(find waypoint_reconfigure)/config/reconfigure_list.yaml"/>
 
   <include file="$(find orne_box_navigation_executor)/launch/move_base.launch">
