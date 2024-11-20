@@ -21,7 +21,7 @@
   <include file="$(find emcl2)/launch/emcl2.launch">
     <arg name="scan_topic" value="$(arg scan_topic)"/>
     <arg name="map_file" value="$(arg map_file)"/>
-    <arg name="initial_pose_x" value="15.0"/>
+    <arg name="initial_pose_x" value="4.0"/>
     <arg name="initial_pose_y" value="-1.2"/>
     <arg name="initial_pose_a" value="0.0"/>
   </include>
