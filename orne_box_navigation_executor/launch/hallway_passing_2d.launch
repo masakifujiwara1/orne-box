@@ -39,7 +39,7 @@
   <node pkg="rviz" type="rviz" name="rviz" args="-d $(find orne_box_navigation_executor)/rviz/nav.rviz"/>
 
   <node pkg="timed_roslaunch" type="timed_roslaunch.sh" 
-    args="0 orne_box_navigation_executor start_wp_nav.launch" name="timed_roslaunch1" />
+    args="13 orne_box_navigation_executor start_wp_nav.launch" name="timed_roslaunch1" />
 
 </launch>
 
