@@ -19,6 +19,7 @@ prev_pos = None
 prev_time = None
 sum_dist = 0.0
 dist_count = 0
+orne_box_moving = False
 
 def callback_dist(data):
     global min_dist, min_ttc, navigation_finished, sum_dist, dist_count, prev_time
@@ -29,6 +30,7 @@ def callback_dist(data):
         # モデル名とポーズのリストを取得
         model_names = data.name
         poses = data.pose
+        twists = data.twist
 
         # orne_boxとactor2のインデックスを取得
         orne_box_index = model_names.index('orne_box')
@@ -37,9 +39,12 @@ def callback_dist(data):
         # orne_boxとactor2の位置と速度を取得
         orne_box_position = np.array([poses[orne_box_index].position.x, poses[orne_box_index].position.y])
         actor2_position = np.array([poses[actor2_index].position.x, poses[actor2_index].position.y])
-        orne_box_velocity = np.array([poses[orne_box_index].position.x, poses[orne_box_index].position.y])
-        actor2_velocity = np.array([poses[actor2_index].position.x, poses[actor2_index].position.y])
+        orne_box_velocity = np.array([twists[orne_box_index].linear.x, twists[orne_box_index].linear.y])
+        actor2_velocity = np.array([twists[actor2_index].linear.x, twists[actor2_index].linear.y])
 
+        orne_box_moving = np.linalg.norm(orne_box_velocity) > 0.05
+        if not orne_box_moving:
+            return 
 
         # ユークリッド距離を計算
         distance = np.linalg.norm(orne_box_position - actor2_position)
