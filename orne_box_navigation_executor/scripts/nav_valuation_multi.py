@@ -32,6 +32,7 @@ def callback_dist(data):
         # モデル名とポーズのリストを取得
         model_names = data.name
         poses = data.pose
+        twists = data.twist
 
         # orne_boxとactor2のインデックスを取得
         orne_box_index = model_names.index('orne_box')
